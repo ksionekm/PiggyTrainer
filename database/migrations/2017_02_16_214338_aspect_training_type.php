@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAspectsTable extends Migration
+class AspectTrainingType extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,14 @@ class CreateAspectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('aspects', function (Blueprint $table) {
+        Schema::create('aspect_training_type', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('unit', 10);
             $table->integer('training_type_id')->unsigned();
-            $table->integer('training_aspect_id')->unsigned();
+            $table->integer('aspect_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('training_type_id')->references('id')->on('training_types');
-            $table->foreign('training_aspect_id')->references('id')->on('training_aspects');
+            $table->foreign('aspect_id')->references('id')->on('aspects');
         });
     }
 
@@ -33,6 +31,6 @@ class CreateAspectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aspects');
+        //
     }
 }
