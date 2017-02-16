@@ -15,6 +15,8 @@ class CreateTrainingTypesTable extends Migration
     {
         Schema::create('training_types', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->boolean('social');
             $table->timestamps();
         });
     }
