@@ -21,7 +21,6 @@ class CreateTrainingAspectsTable extends Migration
             $table->timestamps();
 
             $table->foreign('training_id')->references('id')->on('trainings');
-            $table->foreign('aspect_id')->references('id')->on('aspects');
         });
     }
 

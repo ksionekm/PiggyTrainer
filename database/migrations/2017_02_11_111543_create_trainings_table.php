@@ -24,8 +24,7 @@ class CreateTrainingsTable extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('type_id')->references('id')->on('training_types');
-            $table->foreign('training_aspect_id')->references('id')->on('training_aspects');
+            $table->foreign('training_type_id')->references('id')->on('training_types');
         });
     }
 
