@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+/** Training routes */
+Route::get('/trainings', 'TrainingController@index');
+Route::get('/trainings/create', 'TrainingController@create');

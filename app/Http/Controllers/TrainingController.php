@@ -7,13 +7,23 @@ use Illuminate\Http\Request;
 class TrainingController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        return view('training.index');
     }
 
     /**
@@ -23,7 +33,7 @@ class TrainingController extends Controller
      */
     public function create()
     {
-        //
+        return view('training.create');
     }
 
     /**
