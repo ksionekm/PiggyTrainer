@@ -31,6 +31,6 @@ class AspectTrainingType extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('aspect_training_type');
     }
 }

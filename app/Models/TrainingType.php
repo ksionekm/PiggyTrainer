@@ -15,6 +15,8 @@ class TrainingType extends Model
         'name', 'social',
     ];
 
+    public $timestamps = false;
+
     public function aspects()
     {
         return $this->belongsToMany('App\Models\Aspect', 

@@ -15,12 +15,13 @@ class CreateTrainingAspectsTable extends Migration
     {
         Schema::create('training_aspects', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('training_id')->unsigned();
-            $table->integer('aspect_id')->unsigned();
-            $table->decimal('value', 10, 2);
+            $table->integer('training_id')->unsigned()->comment('Id treningu z tabeli trainings');
+            $table->integer('aspect_id')->unsigned()->comment('Id aspectu z tabeli aspects');
+            $table->decimal('value', 10, 2)->comment('Wartość aspectu');
             $table->timestamps();
 
             $table->foreign('training_id')->references('id')->on('trainings');
+            $table->foreign('aspect_id')->references('id')->on('aspects');
         });
     }
 
