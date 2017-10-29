@@ -9,8 +9,10 @@
 
                 <div class="panel-body">
                     You are logged in!
+                    <br>
+                    {{ html()->a(route('trainings.index'), 'Trainings List')->class('btn btn-default')}}
+                    {{ html()->a(route('training.add.form'), 'Add training')->class('btn btn-default')}}
                 </div>
-                {{ html()->button('Spatie button')->class('btn') }}
             </div>
         </div>
     </div>

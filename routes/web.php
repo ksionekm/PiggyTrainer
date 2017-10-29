@@ -20,5 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 /** Training routes */
-Route::get('/trainings', 'TrainingController@index');
-Route::get('/trainings/create', 'TrainingController@create');
+Route::get('/trainings', 'TrainingController@index')->name('trainings.index');
+Route::get('/trainings/create', 'TrainingController@create')->name('training.add.form');
+
+
