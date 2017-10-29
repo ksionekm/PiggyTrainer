@@ -10,6 +10,7 @@
                 <div class="panel-body">
                     You are logged in!
                 </div>
+                {{ html()->button('Spatie button')->class('btn') }}
             </div>
         </div>
     </div>
